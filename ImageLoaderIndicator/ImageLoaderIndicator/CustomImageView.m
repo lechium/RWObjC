@@ -17,12 +17,8 @@
     self.progressIndicatorView = [[CircularLoaderView alloc] initWithFrame:CGRectZero];
     [self addSubview:self.progressIndicatorView];
     
-    
-    NSArray *one = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[v]|" options:0 metrics:nil views:@{@"v": self.progressIndicatorView}];
-    NSArray *two = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[v]|" options:0 metrics:nil views:@{@"v": self.progressIndicatorView}];
-    
-    [self addConstraints:one];
-    [self addConstraints:two];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[v]|" options:0 metrics:nil views:@{@"v": self.progressIndicatorView}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[v]|" options:0 metrics:nil views:@{@"v": self.progressIndicatorView}]];
     
     self.progressIndicatorView.translatesAutoresizingMaskIntoConstraints = false;
     
